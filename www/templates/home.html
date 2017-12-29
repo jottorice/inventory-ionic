@@ -1,0 +1,119 @@
+<ion-view view-title="Equipment Inventory">
+  <ion-content>
+      <p>Home page</p>
+      
+      <p>Message: {{message}}</p>
+      <p>showDish: {{showDish}}</p>
+      
+      <h3 ng-show="showDish">{{message}}</h3>
+      <div ng-show="!showDish" ng-repeat="item in items">
+          <p>{{item.itemRef}}</p>
+      </div>
+      
+<!--
+                        <tr ng-repeat="item in items | orderBy:sortType:sortReverse">
+                          <td ng-click="showItemDetail(item._id)">{{ item.itemRef }}</td>
+                          <td ng-click="showItemDetail(item._id)">{{ item.description }}</td>
+                          <td ng-click="showItemDetail(item._id)">{{ item.location }}</td>
+                          <td ng-click="showItemDetail(item._id)">{{ item.note }}</td>
+                          <td><button type="button" ng-click="deleteItem(item._id)">Delete</button></td>
+                        </tr>
+-->
+                <div class="media" ng-if="showItems">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                          <td>
+                            <a href="#" ng-click="sortType = 'itemRef'; sortReverse = !sortReverse">
+                            Item Ref
+                              </a>
+                            <span ng-show="sortType == 'itemRef' && !sortReverse" class="fa fa-caret-down"></span>
+                            <span ng-show="sortType == 'itemRef' && sortReverse" class="fa fa-caret-up"></span>
+                            <ion-icon name="arrow-up"></ion-icon>
+                            <ion-icon name="arrow-down"></ion-icon>
+                          </td>
+                          <td>
+                            <a href="#" ng-click="sortType = 'description'; sortReverse = !sortReverse">
+                            Description
+                            <span ng-show="sortType == 'description' && !sortReverse" class="fa fa-caret-down"></span>
+                            <span ng-show="sortType == 'description' && sortReverse" class="fa fa-caret-up"></span>
+                          </td>
+                          <td>
+                            <a href="#" ng-click="sortType = 'location'; sortReverse = !sortReverse">
+                            Location
+                            <span ng-show="sortType == 'location' && !sortReverse" class="fa fa-caret-down"></span>
+                            <span ng-show="sortType == 'location' && sortReverse" class="fa fa-caret-up"></span>
+                          </td>
+                          <td>
+                            <a href="#" ng-click="sortType = 'note'; sortReverse = !sortReverse">
+                            Note
+                            <span ng-show="sortType == 'note' && !sortReverse" class="fa fa-caret-down"></span>
+                            <span ng-show="sortType == 'note' && sortReverse" class="fa fa-caret-up"></span>
+                          </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="item in items | orderBy:sortType:sortReverse">
+                          <td ng-click="showItemDetail(item._id)">{{ item.itemRef }}</td>
+                          <td ng-click="showItemDetail(item._id)">{{ item.description }}</td>
+                          <td ng-click="showItemDetail(item._id)">{{ item.location }}</td>
+                          <td ng-click="showItemDetail(item._id)">{{ item.note }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+<!--
+        <div class="row header">
+          <div class="col">Item Ref</div>
+          <div class="col">Description</div>
+          <div class="col">Location</div>
+          <div class="col">Note</div>
+        </div>
+        <div class="row" ng-repeat="item in items">
+          <div class="col">{{item.itemRef}}</div>
+          <div class="col">{{item.description}}</div>
+          <div class="col">{{item.location}}</div>
+          <div class="col">{{item.note}}</div>
+        </div>
+-->
+
+<!--
+    <div class="card">
+        <div class="item item-divider">
+            Our Lipsmacking Culinary Creations
+            <span class="badge badge-assertive">{{dish.label}}</span>
+        </div>
+        <div class="item item-thumbnail-left item-text-wrap">
+            <img ng-src="{{baseURL+dish.image}}" alt="Uthappizza">
+            <h2>{{dish.name}}
+             <span class="badge">{{dish.price | currency}}</span></h2>
+            <p>{{dish.description}}</p>
+        </div>
+    </div>
+      <div class="card">
+          <div class="item item-divider">
+            This Month's Promotions
+            <span class="badge badge-assertive">{{promotion.label}}</span>
+          </div>
+          <div class="item item-thumbnail-left item-text-wrap">
+               <img ng-src="{{baseURL+promotion.image}}" alt="{{promotion.name}}">
+                <h2>{{promotion.name}}
+                 <span class="badge">{{promotion.price | currency}}</span></h2>
+                <p>{{promotion.description}}</p>
+          </div>
+      </div>
+      <div class="card">
+          <div class="item item-divider">
+            Meet our Culinary Specialists
+          </div>
+          <div class="item item-thumbnail-left item-text-wrap">
+               <img ng-src="{{baseURL+leader.image}}" alt="{{leader.name}}">
+                <h2>{{leader.name}}</h2>
+                <h4>{{leader.designation}}</h4>
+                <p>{{leader.description}}</p>
+          </div>
+      </div>
+-->
+    </ion-content>
+</ion-view>
