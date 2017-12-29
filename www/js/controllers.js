@@ -340,8 +340,6 @@ angular.module('inventory.controllers', [])
         }
     }])
 
-    // implement the IndexController and About Controller here
-
     .controller('IndexController', ['$scope', 'dish', 'promotion', 'leader', 'items', 'baseURL', function($scope, dish, promotion, leader, items, baseURL) {
 
         $scope.baseURL = baseURL;
@@ -375,14 +373,6 @@ angular.module('inventory.controllers', [])
 //            );
 //
 //
-    }])
-
-    .controller('AboutController', ['$scope', 'leaders', 'baseURL', function($scope, leaders, baseURL) {
-
-        $scope.baseURL = baseURL;
-        $scope.leaders = leaders;
-        console.log($scope.leaders);
-
     }])
 
     .controller('FavoritesController', ['$scope', 'dishes', 'favorites', 'favoriteFactory', 'baseURL', '$ionicListDelegate', '$ionicPopup', '$ionicLoading', '$timeout', function($scope, dishes, favorites, favoriteFactory, baseURL, $ionicListDelegate, $ionicPopup, $ionicLoading, $timeout) {
