@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('conFusion.services', ['ngResource'])
+angular.module('inventory.services', ['ngResource'])
     .constant("baseURL", "https://whispering-mountain-55762.herokuapp.com/")
 
     .factory('itemFactory', ['$resource', 'baseURL', function($resource, baseURL) {
