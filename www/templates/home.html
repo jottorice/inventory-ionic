@@ -1,10 +1,21 @@
+<!--
+    Home page template - basically just the list of inventory items.
+
+    Sorting of table columns is supported, by clicking on the table headers. This is the same
+    functionality as the Angular app, and shares the same code.
+
+    The app supports "pull to refresh" of the list, using the Ionic ion-refresher class.
+    At least this is *one* nice feature of the mobile app.
+-->
 <ion-view view-title="Equipment Inventory">
     
     <ion-content>
+        <!-- Pull to refresh -->
         <ion-refresher on-refresh="doRefresh()">
             <ion-refresher-content></ion-refresher-content>
         </ion-refresher>
 
+        <!-- Display "Loading..." message if we don't have the items from the DB yet -->
         <h3 ng-show="!showItems">{{message}}</h3>
 
         <div class="media" ng-if="showItems">
