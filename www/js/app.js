@@ -63,15 +63,6 @@ angular.module('inventory', ['ionic', 'ngCordova', 'inventory.controllers','inve
                         templateUrl: 'templates/home.html',
                         controller: 'IndexController',
                         resolve: {
-                            leader: ['corporateFactory',function(corporateFactory) {
-                                    return corporateFactory.get({id: 3});
-                                }],
-                            dish: ['menuFactory', function(menuFactory) {
-                                    return menuFactory.get({id: 0});
-                                }],
-                            promotion: ['promotionFactory', function(promotionFactory) {
-                                    return promotionFactory.get({id: 0});
-                                }],
                             items: ['itemFactory',function(itemFactory) {
                                     return itemFactory.query();
                                 }]

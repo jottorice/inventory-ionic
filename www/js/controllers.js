@@ -123,18 +123,11 @@ angular.module('inventory.controllers', [])
     })
 
 
-    .controller('IndexController', ['$scope', 'dish', 'promotion', 'leader', 'items', 'baseURL', function($scope, dish, promotion, leader, items, baseURL) {
+    .controller('IndexController', ['$scope', 'items', 'baseURL', function($scope, items, baseURL) {
 
         $scope.baseURL = baseURL;
-        $scope.leader = leader;
-
-        $scope.showDish = false;
         $scope.message = "Loading ...";
 
-        $scope.dish = dish;
-
-        $scope.promotion = promotion;
-        
         $scope.showItems = true;
         $scope.items = items;
         
