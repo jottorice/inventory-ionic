@@ -141,19 +141,4 @@ angular.module('inventory.controllers', [])
         console.log("IndexController resolved items:");
         console.log(items);
         
-//        var items = itemFactory.query()
-//            .$promise.then(
-//                function (response) {
-//                    var items = response;
-//                    console.log("Items:");
-//                    console.log(items);
-//                    $scope.items = items;
-//                    $scope.showItems = true;
-//                },
-//                function (response) {
-//                    $scope.message = "Error: " + response.status + " " + response.statusText;
-//                }
-//            );
-//
-//
     }]);
