@@ -1,5 +1,10 @@
 <ion-view view-title="Equipment Inventory">
+    
     <ion-content>
+        <ion-refresher on-refresh="doRefresh()">
+            <ion-refresher-content></ion-refresher-content>
+        </ion-refresher>
+
         <h3 ng-show="!showItems">{{message}}</h3>
 
         <div class="media" ng-if="showItems">
