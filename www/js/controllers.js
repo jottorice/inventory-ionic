@@ -1,6 +1,6 @@
 angular.module('inventory.controllers', [])
 
-    .controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicPlatform, $cordovaCamera) {
+    .controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicPlatform) {
         console.log("In AppCtrl");
     })
 
